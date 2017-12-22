@@ -19,8 +19,8 @@ $(function() {
   $(".create-form").on("submit", function(event) {
     event.preventDefault();
     let newBurger = {
-      burger_name: $("#ba").val().trim(),
-      devoured: $("[name=devoured]:checked").val().trim()
+      name: $("#burger").val().trim(),
+      devoured: $("input[name='devoured']:checked").val().trim()
     };
 
     $.ajax("/api/burgers", {
