@@ -1,6 +1,6 @@
 let mysql = require("mysql");
 let connection = mysql.createConnection({
-  port: process.env.port || 3000,
+  port: process.env.port || 3306,
   host: "localhost",
   user: "root",
   password: "1234",
@@ -9,7 +9,7 @@ let connection = mysql.createConnection({
 
 connection.connect(function(err) {
   if (err) throw err;
-  consoel.log("Server going on " + connection.threadId);
+  console.log("Connected as id " + connection.threadId);
 });
 
 module.exports = connection;
