@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: false }));
 
 let exphds = require("express-handlebars");
 
-app.engine("handlebars", exphds({ defaultLayout: "main"}));
+app.engine("handlebars", exphds({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 let routes = require("./controllers/burgerController.js");
