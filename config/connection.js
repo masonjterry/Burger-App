@@ -9,6 +9,7 @@ let connection = mysql.createConnection({
 
 connection.connect(function(err) {
   if (err) throw err;
+  consoel.log("Server going on " + connection.threadId);
 });
 
 module.exports = connection;
