@@ -1,7 +1,12 @@
-li {
+body {
+  background-image: url("../images/background.jpg");
+  background-size: 100%;
+}
+
+p {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .label {
@@ -16,4 +21,14 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.div {
+  background-color: rgba(210, 105, 30, 0.5);
+  padding: 20px;
 }

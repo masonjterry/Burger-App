@@ -1,37 +1,50 @@
-<h1>Burgers!</h1>
-<h2>Burgers yet to be devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that have been devoured</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burger">Burger Name: </label>
-    <input type="text" id="burger" name="name">
+<div class="row">
+  <div class="col-md-12">
+    <h1>Burger Time!</h1>
   </div>
-
-<div class="form-group">
-  <label for="devoured">Devoured?</label><br>
-  <input type="radio" name="devoured" value="1"> Devoured!<br>
-  <input type="radio" name="devoured" value="0"> Ready to be devoured!
 </div>
 
-  <button type="submit">Add Burger</button>
-</form>
+<div class="row">
+  <div class="col-md-4">
+    <div class="div">
+      <h2>Yet To Be Eaten</h2>
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burgers/burger-block devoured=true}}
+          {{/unless}}
+        {{/each}}
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="div">
+      <h2>Eaten</h2>
+        {{#each burgers}}
+          {{#if devoured}}
+            {{> burgers/burger-block devoured=false}}
+          {{/if}}
+        {{/each}}
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="div">
+      <h2>Add A Burger</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="burger">Burger Name: </label>
+          <input type="text" id="burger" name="name" placeholder="Favorite Burger">
+        </div>
+
+      <div class="form-group">
+        <label for="devoured">Devoured?</label><br>
+        <input type="radio" name="devoured" value="1"> Devoured!<br>
+        <input type="radio" name="devoured" value="0"> Ready to be devoured!
+      </div>
+
+        <button class="btn btn-secondary" type="submit">Add Burger</button>
+      </form>
+    </div>
+  </div>
+</div>
